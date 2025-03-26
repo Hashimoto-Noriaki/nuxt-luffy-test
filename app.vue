@@ -16,6 +16,16 @@ const totalBounty = computed(
   }
 );
 
+//依頼により実行されるメソッド
+const onIncrementBounty = (id: number): void => {
+  //オブジェクトを取得
+  const character = characterList.vakue.get(id);
+  //オブジェクトが存在するなら
+  if(character != undefined) {
+    character.bounty += 1000;
+  }
+}
+
 //キャラクターインターフェイス
 interface Character {
   id:number;
@@ -23,9 +33,7 @@ interface Character {
   bounty:number;
 }
 
-
 </script>
-
 
 <template>
   <section>
@@ -34,8 +42,11 @@ interface Character {
     <OneCharacter
       v-for="[id,character] in characterList"
       v-bind:key="id"
+      v-bind:id="id"
       v-bind:name="character.name"
-      v-bind:bounty="character.bounty"/>
+      v-bind:bounty="character.bounty"
+      v-on:incrementBounty="onIncrementBounty"
+      />
   </section>
 </template>
 
