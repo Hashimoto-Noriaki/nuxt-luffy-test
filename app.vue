@@ -1,6 +1,14 @@
+<script setup lang="ts">
+const gomgom = Math.round(Math.random() * 100);
+const marchenGomgom = gomgom *10;
+</script>
+
 <template>
-  <div>
-    <h1>Nuxt.jsをやるぞ</h1>
-    <!-- <NuxtWelcome /> -->
-  </div>
+  <p>{{gomgom}}ゴムゴムは{{marchenGomgom}}メルヘン</p>
 </template>
+
+<style>
+  p {
+    color:limegreen;
+  }
+</style>
