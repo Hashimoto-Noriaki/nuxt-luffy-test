@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <h1>Nuxt.jsをやるぞ</h1>
+    <!-- <NuxtWelcome /> -->
   </div>
 </template>
