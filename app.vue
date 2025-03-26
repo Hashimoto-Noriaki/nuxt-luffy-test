@@ -2,6 +2,7 @@
   <section>
     <h1>キャラクター名</h1>
     <Nami/><!-- Nuxt.jsはオールインポート-->
+    <MonkeyLuffy/><!-- サブフォルダも自動インポートでサブフォルダ名も含める-->
   </section>
 </template>
 
